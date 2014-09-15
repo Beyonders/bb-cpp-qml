@@ -18,27 +18,25 @@ ApplicationWindow {
     Image {
         id: bg
         source: "images/Title planet.png"
+        x:parent.width/2 - width/2
+        y:parent.height/2 - height/2
+
+        /*verticalAlignment: Image.AlignVCenter
+        horizontalAlignment: Image.AlignHCenter*/
     }
+    Image {
+        id: titleImage
+        source: "images/Title name.png"
+        x:parent.width/2 - width/2
+        y:parent.height/2 - height/2
+
+        /*verticalAlignment: Image.AlignVCenter
+        horizontalAlignment: Image.AlignHCenter*/
+    }
+
     FontLoader {
         id: localFont;
         source: "fonts/JLSSpaceGothicR.ttf"
-    }
-    Text {
-        text: "Beyond Beyaan"
-
-        color: "yellow"
-        anchors.horizontalCenter: parent.horizontalCenter
-
-        y: 100
-
-        font {
-            family: localFont.name;
-            pointSize: 34;
-            capitalization: Font.Capitalize
-        }
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
-
     }
     Column{
         anchors.centerIn: parent

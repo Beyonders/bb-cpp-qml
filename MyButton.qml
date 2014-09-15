@@ -26,11 +26,10 @@ Button {
         }
     }
 
-
-    style: ButtonStyle {
-        id: styleItem
-        label:     Text {
-            id: textItem
+    /*Item {
+        id: buttonText
+        Text {
+            id: backgroundText
             text: buttonItem.text
 
             font {
@@ -38,9 +37,63 @@ Button {
                 pointSize: 14;
                 capitalization: Font.Capitalize
             }
+
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
 
+            color: "#000000"
+        }
+        Text {
+            id: foregroundText
+            text: buttonItem.text
+
+            font {
+                family: localFont.name;
+                pointSize: 14;
+                capitalization: Font.Capitalize
+            }
+
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+
+            color: "#FFD700"
+        }
+    }*/
+
+    style: ButtonStyle {
+        id: styleItem
+        label: Item {
+            id: buttonText
+            Text {
+                id: backgroundText
+                text: buttonItem.text
+                x: parent.width/2 - width/2 + 2
+                y: parent.height/2 - height/2 + 2
+
+                font {
+                    family: localFont.name;
+                    pointSize: 24;
+                    capitalization: Font.Capitalize
+                    bold: true
+                }
+
+                color: "#000000"
+            }
+            Text {
+                id: foregroundText
+                text: buttonItem.text
+                x: parent.width/2 - width/2
+                y: parent.height/2 - height/2
+
+                font {
+                    family: localFont.name;
+                    pointSize: 24;
+                    capitalization: Font.Capitalize
+                    bold: true
+                }
+
+                color: "#FFD700"
+            }
         }
         background: Rectangle {
             Image {
@@ -60,13 +113,6 @@ Button {
             }
             color: 'transparent'
         }
-        SequentialAnimation
-        {
-            id: flash
-            running: false
-            NumberAnimation { }
-        }
-
     }
 
 }

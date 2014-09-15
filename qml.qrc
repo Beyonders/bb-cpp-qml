@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MyButton.qml</file>
+        <file>images/humans.png</file>
+        <file>images/MainButtonBG.png</file>
+        <file>images/MainButtonFG.png</file>
+        <file>images/Title nebula.png</file>
+        <file>images/Title planet.png</file>
+        <file>fonts/JLSSpaceGothicR.ttf</file>
+    </qresource>
+</RCC>
